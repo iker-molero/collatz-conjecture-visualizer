@@ -63,7 +63,7 @@ visualizer_controller = function($scope) {
     //* - repetitions (array)
     $scope.plot_values = function(repetitions) {
 
-        graph_service.load_graph('visualizer', repetitions)
+        graph_service.update_graph('visualizer', repetitions)
 
     };
     graph_service.update_graph('visualizer', [])

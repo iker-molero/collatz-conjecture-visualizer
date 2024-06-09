@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz Conjecture Visualizer</title>
+
+    <!--? [ CSS LIBRARIES REFERENCES ] -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+    <!--? [ CSS REFERENCES ] -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body ng-app="collatz-conjecture-visualizer" ng-controller="visualizer_controller">
+    
+    <div class="graph_wrapper">
+        <div class="title">
+            <p>Collatz Conjecture Visualizer</p>
+        </div>
+        <div class="graph">
+            <canvas id="visualizer" width="700" height="400"></canvas>
+        </div>
+        <div class="graph_input">
+            <input type="text" ng-model="number_to_visualize" ng-change="validate_number()">
+            <button class="btn" ng-click="calculate_repetitions(number_to_visualize)" ng-disabled="!is_valid">
+                <p>Plot Number</p>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+    <!--? [ JS LIBRARIES REFERENCES ] -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js"></script>
+
+    <!--? [ JS REFERENCES ] -->
+    <script src="js/app.js"></script>
+
+    <!--* Controllers -->
+    <script src="js/controllers/visualizer_controller.js"></script>
+
+    <!--* Services -->
+    <script src="js/services/graph_service.js"></script>
+
+</html>

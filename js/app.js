@@ -1,0 +1,1 @@
+const app = angular.module("collatz-conjecture-visualizer", []);

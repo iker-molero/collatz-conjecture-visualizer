@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter.ttf);
+}
+
+body {
+
+    user-select: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: #000000;
+    font-family: Inter;
+
+}
+
+.graph_wrapper {
+
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.title {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    p {
+
+        font-size: 48px;
+        color: #ffffff;
+        margin: 0px;
+
+    }
+
+}
+
+.graph_input {
+
+    display: flex;
+    gap: 10px;
+
+    input { flex-grow: 1; }
+
+}
+
+input {
+
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    text-indent: 5px;
+    border-bottom: 3px solid white;
+
+}
+
+.btn {
+
+    width: fit-content;
+    height: 34px;
+    padding: 0px 10px;
+    background-color: #cf4b61;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+
+        font-size: 15px;
+        margin: 0px;
+
+    }
+
+}
+
+.btn:hover { background-color: #fc3a5b; }
+.btn:disabled {
+
+    background-color: rgb(146, 62, 76);
+    color: #cacaca;
+    cursor: not-allowed;
+
+}

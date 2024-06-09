@@ -24,6 +24,7 @@ graph_service.load_graph = function (canvas_id, data_values) {
         },
 
         options: {
+            animation: false,
             legend: {display: false},
             scales: {
                 xAxes: [{
@@ -69,8 +70,12 @@ graph_service.update_graph = function (canvas_id, data_values) {
 
     if (graph_service.loaded_graphs[canvas_id]) {
 
+        console.log(graph_service.loaded_graphs[canvas_id])
+        
         graph_service.loaded_graphs[canvas_id].data.labels = data_values; 
-        graph_service.loaded_graphs[canvas_id].data.datasets.data = data_values; 
+        graph_service.loaded_graphs[canvas_id].data.datasets[0].data = data_values; 
+
+        graph_service.loaded_graphs[canvas_id].update()
 
     } else graph_service.load_graph(canvas_id, data_values)
 
